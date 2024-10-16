@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/ds-logo-color.png" width="200">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Agustin Marquez</title>    
+</head>
+
+
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-home">
+                <a href="index.html">
+                    <span class="agustin">AGUSTIN</span>
+                    <span class="marquez">MARQUEZ</span>
+                </a>              
+            </div>
+
+            <button class="hamburger" aria-label="Abrir menú">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+
+            <ul class="menu">
+                <li><a href="sobre-mi">Sobre Mí</a></li>
+                <li><a href="vlog">Vlog</a></li>
+                <li><a href="dynamo-slides.html">DynamoSlides</a></li>
+                <li><a href="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="banner-container">
+        <img src="images/portrait.jpg" alt="Agustín Marquez" class="banner-pic">
+    </div>
+
+    <main>
+        <h1>AGUSTIN MARQUEZ</h1>
+        <h2>2024</h2>
+        <section>
+            <div class="profile-container">
+                <div class="profile-text">
+                    <p>Me llamo Agustín Marquez y soy un profesional de 27 años viviendo en Buenos Aires con formación en informática y marketing.</p>
+                    <p>Tras 7 años de experiencia en seguridad pública y derecho, decidí pulir mis habilidades en ventas y comunicación.</p>
+                    <p>Actualmente desarrollo mi carrera freelance en base al diseño de presentaciones gráficas digitales para estudiantes y profesionales.</p>
+                </div>
+                <img src="images/foto-perfil.png" alt="Foto de perfil de Agustín Marquez" class="profile-pic">
+            </div>
+        </section>
+        <hr>
+    </main>
+
+<footer>
+    <div class="form-contact">
+        <h2>Ponte en contacto conmigo</h2>
+        <form action="#">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" required>    
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje" required></textarea>    
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    
+    <h2>O sígueme en mis redes sociales</h2>
+    <ul class="socials">
+        <li><a href="https://www.instagram.com/agusxxiv/" target="_blank" aria-label="Instagram">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/federicomarquez24/" target="_blank" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://www.tiktok.com/@agusxxiv/" target="_blank" aria-label="TikTok">TikTok</a></li>
+    </ul>
+
+    <div>
+        <p>&copy; Agustín Marquez 2024 | Diseñador de Presentaciones Gráficas | Términos legales</p>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+</script>
+
+<!-- CLASESPPALES
+ .menu-home
+ .agustin
+ .marquez
+ .hamburger
+ .line
+ .menu
+ .retrato
+ .banner-container
+ .banner-pic
+ .profile-container
+ .profile-pic
+ .profile-text
+ .form-contact
+ .socials
+ -->
+
+</body>
+</html>

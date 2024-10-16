@@ -1,0 +1,325 @@
+/****** GLOBAL ******/
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    scroll-behavior: smooth;
+}
+
+
+/****** TEXTO y FUENTES ******/
+body {font-family: 'Mulish', sans-serif;}
+h1, h2 {font-family: 'Montserrat', sans-serif;}
+h1 {font-size: 2.5rem; text-align: center;} 
+h2 {font-size: 2rem; text-align: center;}
+p {font-size: 1.0rem;}
+
+
+/***** NAVEGACION *****/
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;                        /* Espaciado horizontal */
+    height: 60px;
+    z-index: 1000;
+}
+nav a {
+    color: #060606;
+    text-decoration: none; 
+    padding: 14px 20px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/***** MENU *****/
+.menu-home .marquez {color: #554fff;}
+.menu-home .agustin {color: #000000;}
+.menu-home .agustin, .menu-home .marquez {
+    align-items: center;
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    font-family: 'Montserrat', sans-serif;
+    margin-right: auto;
+}
+.menu {
+    display: flex;
+    gap: 2rem;                              /* Menor espacio entre los elementos */
+    justify-content: center;                /* Asegurar centrado */
+    margin-left: auto;                      /* Empuja el menú a la derecha */
+}
+.menu a {
+    color: #060606;
+    font-weight: bolder; 
+    font-size: 1rem; 
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none; 
+    padding: 14px 20px;                     /* Ajuste de padding en lugar de márgenes */
+}
+.menu a:hover {
+    color: #554fff;
+    transition: background-color 0.8s ease;
+}
+
+
+/***** MENU HAMBURGUESA *****/
+.hamburger {                            
+    background: transparent;
+    display: none;                          /* Oculto por defecto */
+    position: absolute;                     /* Posicionamiento */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    top: 1rem;                              /* Ajustar al margen superior */
+    right: 2rem;                            /* Ajustar al margen derecho */
+    z-index: 1001;                          /* Para que esté por encima del menú */
+}
+.hamburger .line {
+    background-color: #333;
+    width: 30px;
+    height: 3px;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/***** CONTENIDO *****/
+main {
+    display: flex;                      /* Flexbox para el contenido ppal */
+    padding-top: 80px 40px 0;           /* Espaciado superior para evitar que el contenido esté detrás del navbar */
+    flex-direction: column;
+}
+.banner-container {
+    display: flex;                      /* Flexbox para alinear el contenido dentro del contenedor */
+    justify-content: center;            /* Centrar imagen horizontalmente */
+    align-items: center;                /* Centrar imagen verticalmente */
+    width: 100%;
+    max-width: 600%;                    /* La imagen no puede exceder el ancho del contenedor */
+    height: auto;                       /* Mantiener proporción de la imagen */
+    padding: 0rem;                      /* Espacio interno, opcional */
+}
+.banner-pic {
+    max-width: 100%;                    /* La imagen escala según el tamaño del contenedor */
+    height: auto;                       /* Mantiene la proporción de la imagen */
+    object-fit: cover;                  /* Asegurar que la imagen llene el contenedor manteniendo su proporción */
+}
+.profile-container {
+    display: flex;
+    justify-content: center;            /* Centra horizontalmente el contenido */
+    align-items: flex-start;            /* Alinea imagen y texto a la parte superior */
+    gap: 20px;                          /* Añade espacio entre imagen y texto */
+    padding: 20px;
+    max-width: 80%;                     /* Tamaño del contendor */
+    margin: auto;                       /* Centrar contenedor */
+    text-align: left;
+}
+.profile-pic {
+    width: 150px;                       /* Tamaño fijo para la imagen */
+    height: auto;                       /* Ajusta la altura automáticamente */
+}
+.profile-text {
+    max-width: 600px;                   /* Limita el ancho del texto */
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 1rem;                /* Agrega interlinedo de párrafos */
+}
+
+img, input, textarea {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/***** PIE DE PAGINA *****/
+footer {
+    color: white;
+    background-color: #010018; 
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/***** FORMULARIO *****/
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-width: 50rem; 
+    margin: 0 auto 4rem;
+}
+.form-contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 5rem;
+}
+.form-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-contact input, .form-contact textarea {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 100%; 
+}
+.form-contact button {
+    color: white;
+    background-color: #554fff;           
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-contact button:hover {
+    background-color: #3b3fff;                  /* Cambio de color al pasar el cursor */
+}
+
+
+/***** REDES SOCIALES *****/
+.socials {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 0 auto 4rem;
+    margin: auto 4rem;
+}
+.socials li {
+    margin: 0 15px;                                 /* Espaciado entre ítems */
+}
+.socials a {
+    font-family: 'Montserrat', sans-serif;
+    color: #554fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.socials a:hover {
+    text-decoration: underline;                     /* Subrayado al pasar el cursor */
+}
+.copy {
+    display: flex;
+    color: #666;
+}
+.copy a {
+    color: #554fff;
+    text-decoration: none;
+    font-size: 11px;
+}
+.copy a:hover {
+    text-decoration: underline;
+}
+
+
+/**** RESPONSIVE - PANTALLAS PEQUEÑAS *****/
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;             /* Cambiar la dirección del menú*/
+    }
+    .container-portrait {
+        padding: 0.5rem;
+    }
+    .profile-container {
+        flex-direction: column;             /* Apila los elementos verticalmente en pantallas pequeñas */
+        text-align: center;
+    }
+    .profile-pic {
+        margin: 0 auto;                     /* Centra la imagen en pantallas pequeñas */
+        width: 100px;                       /* Reduce el tamaño de la imagen en dispositivos pequeños */
+    }
+    .menu {
+        background-color: #ffffff;
+        display: none;                      /* Oculta menú nav en móviles */
+        flex-direction: column;             /* Despliega el menú de forma vertical */
+        justify-content: center;            /* Centar menú */
+        position: absolute;                 /* Posicionarlo de forma absoluta */
+        top: 60px;                          /* Lo sitúa debajo del navbar */
+        right: 0;                           /* Alineación derecha */
+        width: 100%;                        /* Ancho completo */
+        z-index: 1000;
+    }
+    .menu a {
+        border-bottom: 1px solid #554fff; /* Línea separadora entre links */ 
+        padding: 1rem;                      /* Espaciado interno para links del menú */
+    }
+    .menu.active {
+        display: flex;                      /* Mostrar el menú en forma de columna */
+        flex-direction: column;
+        align-items: flex-start;            /* Alinear menú a la izquierda */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 1rem;
+    }
+    .hamburger {
+        display: flex;                      /* Mostrar menú hamburguesa sólo en móviles */
+        margin-left: auto;
+    }
+    h1 {
+        font-size: 300%;
+    }
+    h2 {
+        font-size: 150%;
+    }
+    .texto {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 100%;
+    }
+    footer {
+        padding: 20px 10px;
+    }
+
+/**** RESPONSIVE - PANTALLAS GRANDES *****/
+@media (min-width: 769px) {
+    .menu {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;      /* Asegura que el menú esté alineado a la derecha */
+    }
+    nav ul {
+        display: flex;                  /* Asegura que el menú completo esté visible */
+        flex-direction: row;            /* Mantén los elementos alineados en fila */
+        position: static;               /* Evita que el menú sea absoluto en pantallas grandes */
+    }
+    .section {
+        flex-direction: row;            /* Alinea los elementos horizontalmente */
+        align-items: center;            /* Alineación vertical */
+    }
+    .hamburger {
+        display: none;                  /* Oculta el ícono hamburguesa en pantallas grandes */
+    }
+}
+}
