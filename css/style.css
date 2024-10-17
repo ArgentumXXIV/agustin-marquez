@@ -5,7 +5,9 @@
     box-sizing: border-box; 
     scroll-behavior: smooth;
 }
-
+html {
+    scroll-behavior: smooth;                   /* Suave desplazamiento de los enlaces */ 
+}
 
 /****** TEXTO y FUENTES ******/
 body {font-family: 'Mulish', sans-serif;}
@@ -106,10 +108,10 @@ nav ul {
 
 
 /***** CONTENIDO *****/
-main {
+main {                                  /* Fundamental para el SEO */
     display: flex;                      /* Flexbox para el contenido ppal */
     padding-top: 80px 40px 0;           /* Espaciado superior para evitar que el contenido esté detrás del navbar */
-    flex-direction: column;
+    flex-direction: column;             /* Contenido de las secciones encolumnado */
 }
 .banner-container {
     display: flex;                      /* Flexbox para alinear el contenido dentro del contenedor */
@@ -145,13 +147,29 @@ main {
     line-height: 1.5em;
     margin-bottom: 1rem;                /* Agrega interlinedo de párrafos */
 }
-
+.vlog-text {
+    align-content: center; 
+    max-width: 600px;                   /* Limita el ancho del texto */
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 8rem;                /* Agrega interlinedo de párrafos */
+}
+.image-gallery {
+    display: flex;
+    justify-content: space-between;     /* Distribuir espacio entre las imágenes */
+    gap: auto;                          /* Margen entre las imágenes */
+}  
+.image-gallery img {
+    width: 100px;                       /* Ajusta el tamaño de las imágenes aquí */
+    height: 100px;                      /* Proporción 1:1 para que sean cuadradas */
+    object-fit: cover;                  /* Asegura que la imagen cubra el cuadro */
+    box-shadow: #000000;
+}
 img, input, textarea {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
 
 /***** PIE DE PAGINA *****/
 footer {
