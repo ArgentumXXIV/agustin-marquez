@@ -126,6 +126,7 @@ main {                                  /* Fundamental para el SEO */
     max-width: 100%;                    /* La imagen escala según el tamaño del contenedor */
     height: auto;                       /* Mantiene la proporción de la imagen */
     object-fit: cover;                  /* Asegurar que la imagen llene el contenedor manteniendo su proporción */
+    padding-bottom: 5%;
 }
 .profile-container {
     display: flex;
@@ -145,26 +146,59 @@ main {                                  /* Fundamental para el SEO */
     max-width: 600px;                   /* Limita el ancho del texto */
     font-size: 1.2em;
     line-height: 1.5em;
-    margin-bottom: 1rem;                /* Agrega interlinedo de párrafos */
+    margin-bottom: 4rem;                /* Agrega interlinedo de párrafos */
 }
 .vlog-text {
-    align-content: center; 
-    max-width: 600px;                   /* Limita el ancho del texto */
+    display: flex;
+    flex-direction: column;             /* Alinea el contenido verticalmente */
+    justify-content: center;            /* Centra el texto */
+    align-items: center;
+    text-align: center;
+    height: 150px;
     font-size: 1.2em;
     line-height: 1.5em;
-    margin-bottom: 8rem;                /* Agrega interlinedo de párrafos */
+    margin-bottom: 4rem;                /* Agrega interlinedo de párrafos */
+    padding: 5%;
 }
 .image-gallery {
     display: flex;
-    justify-content: space-between;     /* Distribuir espacio entre las imágenes */
-    gap: auto;                          /* Margen entre las imágenes */
-}  
+    justify-content: center;            /* Distribuir espacio entre las imágenes */
+    gap: 10px;                          /* Margen entre las imágenes */
+    padding-bottom: 10%;
+}   
 .image-gallery img {
-    width: 100px;                       /* Ajusta el tamaño de las imágenes aquí */
-    height: 100px;                      /* Proporción 1:1 para que sean cuadradas */
+    width: 200px;                       /* Ajusta el tamaño de las imágenes aquí */
+    height: 200px;                      /* Proporción 1:1 para que sean cuadradas */
     object-fit: cover;                  /* Asegura que la imagen cubra el cuadro */
     box-shadow: #000000;
 }
+.dynamoslides-container {
+    display: flex;                      /* Flexbox para alinear el contenido dentro del contenedor */
+    justify-content: center;            /* Centrar imagen horizontalmente */
+    align-items: center;                /* Centrar imagen verticalmente */
+    width: 100%;
+    max-width: 600%;                    /* La imagen no puede exceder el ancho del contenedor */
+    height: auto;                       /* Mantiener proporción de la imagen */
+    padding-bottom: 1%;
+}
+.image-gif {
+    display: flex;
+    justify-content: center;            /* Distribuir espacio entre las imágenes */
+    gap: 10px;                          /* Margen entre las imágenes */
+    padding-bottom: 10%;
+}
+.dynamoslides-text {
+    display: flex;
+    flex-direction: column;             /* Alinea el contenido verticalmente */
+    justify-content: center;            /* Centra el texto */
+    align-items: center;
+    text-align: center;
+    height: 150px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 4rem;                /* Agrega interlinedo de párrafos */
+    padding: 5%;
+} 
 img, input, textarea {
     max-width: 100%;
     height: auto;
